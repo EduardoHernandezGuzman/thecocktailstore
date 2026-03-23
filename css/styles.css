@@ -290,6 +290,7 @@ button {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
+    align-items: stretch;
 }
 
 .product__card {
@@ -298,6 +299,9 @@ button {
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0,0,0,.1);
     transition: .3s;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .product__card:hover {
@@ -312,6 +316,14 @@ button {
 
 .product__content {
     padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.product__description {
+    margin-bottom: var(--mb-2);
+    flex-grow: 1;
 }
 
 .product__title {
@@ -1174,6 +1186,7 @@ button {
     .product__buttons {
     display: flex;
     gap: 0.5rem;
+        margin-top: auto;
     }
     
     .product__buttons .button--secondary {

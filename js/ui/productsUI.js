@@ -76,8 +76,8 @@ export class ProductsUI {
       button.textContent = "¡Añadido!";
       button.classList.add("added");
       setTimeout(() => {
-        button.textContent = "Añadir al Carrito";
         button.classList.remove("added");
+        button.innerHTML = `<i class="fas fa-cart-plus"></i>`;
       }, 1500);
     }
   }
